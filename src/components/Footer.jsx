@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { assets } from "../assets/assets";
 
 export default function Footer() {
@@ -6,9 +7,15 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row items-start justify-center gap-10 py-10 border-b border-gray-500/30">
                 
                 <div className="max-w-96">
-                    <a href="#" className="text-[#157682]">
-                              <img src={assets.Logo} alt="logo" className="h-[60px]" />
-                    </a>
+                    <div className="flex gap-3">
+                        <Link to="/">
+                        <img src={assets.Logo} alt="logo" className="h-[60px]" />
+                        </Link>
+                        <div className="mt-6">
+                            <h2 className="font-bold text-xl leading-2">TRINITY</h2>
+                            <p>Asset Care</p>
+                        </div>
+                        </div>
                     <p className="mt-6 text-sm text-gray-500">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
                     </p>

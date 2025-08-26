@@ -1,5 +1,5 @@
-import Logo from './logo.PNG';
-import Why from './why.PNG';
+import Logo from './logonew.PNG';
+import Why from './why.jpeg';
 
 export const assets = {
     Logo,

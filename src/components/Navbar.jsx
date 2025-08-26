@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,9 +9,15 @@ const Navbar = () => {
     <>
       <nav className="h-[70px] relative w-full px-6 md:px-8 flex items-center justify-between z-20 bg-[#f1f6f2] text-gray-700 shadow-[0px_4px_25px_0px_#0000000D] transition-all">
         {/* Logo */}
-        <a href="#" className="text-[#157682]">
-          <img src={assets.Logo} alt="logo" className="h-[60px]" />
-        </a>
+        <div className="flex gap-3">
+          <Link to="/">
+           <img src={assets.Logo} alt="logo" className="h-[60px]" />
+          </Link>
+          <div className="mt-7">
+            <h2 className="font-bold text-xl leading-3">TRINITY</h2>
+            <p className="text-[11px] text-gray-500 text-center">Asset Care</p>
+          </div>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="md:flex hidden items-center gap-10">

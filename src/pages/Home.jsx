@@ -28,10 +28,10 @@ const Home = () => {
       <h2 className='font-bold text-6xl text-center mb-6'>Our Services</h2>
       {/* Cards */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <ServicesCards heading="VA Support for Booking" para="All-for Support for buildings" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
-        <ServicesCards heading="VA Support for Booking" para="All-for Support for buildings" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
-        <ServicesCards heading="VA Support for Booking" para="All-for Support for buildings" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
-        <ServicesCards heading="VA Support for Booking" para="All-for Support for buildings" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
+        <ServicesCards heading="24/7 Guest Communication" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
+        <ServicesCards heading="Revenue Optimization" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
+        <ServicesCards heading="End-to-End Management" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
+        <ServicesCards heading="Multi-Platform Support" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
       </div>
       {/* Cards */}
     </div>
@@ -40,9 +40,12 @@ const Home = () => {
     {/* Our Services */}
     <div className='bg-white px-8 py-8'>
       <h2 className='font-bold text-6xl text-center mb-6'>Why Choose Us</h2>
+      <p className="mb-6 text-sm text-gray-500 text-center">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                    </p>
         <div className='grid grid-cols-1 md:grid-cols-2'>
           <div className='flex items-center justify-center'>
-            <img src={assets.Why} alt="why" />
+            <img src={assets.Why} alt="why" className='w-[100px] h-[100px] lg:ml-32' />
           </div>
           
           <div className="flex flex-col gap-6 justify-between">
