@@ -13,10 +13,6 @@ const Navbar = () => {
           <Link to="/">
            <img src={assets.Logo} alt="logo" className="h-[60px]" />
           </Link>
-          <div className="mt-7">
-            <h2 className="font-bold text-xl leading-3">TRINITY</h2>
-            <p className="text-[11px] text-gray-500 text-center">Asset Care</p>
-          </div>
         </div>
 
         {/* Desktop Menu */}

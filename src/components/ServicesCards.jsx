@@ -1,10 +1,10 @@
 
-export default function ServicesCards({ heading, para, icon }) {
+export default function ServicesCards({ heading, imageUrl, icon }) {
   return (
     <section 
   className="relative bg-white rounded-2xl shadow-xl overflow-hidden group w-full h-48 cursor-pointer transition-transform duration-300 hover:scale-105"
   style={{
-    backgroundImage: "url('https://fastly.picsum.photos/id/4/5000/3333.jpg?hmac=ghf06FdmgiD0-G4c9DdNM8RnBIN7BO0-ZGEw47khHP4')", // replace with your image
+    backgroundImage: `url(${imageUrl})`,
     backgroundSize: "cover",
     backgroundPosition: "center"
   }}

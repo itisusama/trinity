@@ -3,6 +3,8 @@ import heroImage from '../assets/heroImage.png'
 import ServicesCards from '../components/ServicesCards'
 import { assets } from '../assets/assets'
 import { Headset, PiggyBank, CalendarCheck } from "lucide-react";
+import { MdManageHistory } from "react-icons/md";
+import { FaDollarSign } from "react-icons/fa6";
 
 const Home = () => {
   return (
@@ -26,11 +28,14 @@ const Home = () => {
     {/* Our Services */}
     <div className='bg-[#f1f6f2] px-8 py-8'>
       <h2 className='font-bold text-6xl text-center mb-6'>Our Services</h2>
+      <p className="mb-6 text-sm text-gray-500 text-center">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
+                    </p>
       {/* Cards */}
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <ServicesCards heading="24/7 Guest Communication" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
-        <ServicesCards heading="Revenue Optimization" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
-        <ServicesCards heading="End-to-End Management" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
+        <ServicesCards heading="24/7 Guest Communication" icon={<Headset className="text-white w-4 h-4"/>} imageUrl="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4"/>
+        <ServicesCards heading="Revenue Optimization" icon={<FaDollarSign className="text-white w-4 h-4"/>}/>
+        <ServicesCards heading="End-to-End Management" icon={<MdManageHistory className="text-white w-4 h-4"/>} imageUrl="https://fastly.picsum.photos/id/4/5000/3333.jpg?hmac=ghf06FdmgiD0-G4c9DdNM8RnBIN7BO0-ZGEw47khHP4"/>
         <ServicesCards heading="Multi-Platform Support" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
       </div>
       {/* Cards */}
@@ -43,7 +48,7 @@ const Home = () => {
       <p className="mb-6 text-sm text-gray-500 text-center">
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
                     </p>
-        <div className='grid grid-cols-1 md:grid-cols-2'>
+        {/* <div className='grid grid-cols-1 md:grid-cols-2'>
           <div className='flex items-center justify-center'>
             <img src={assets.Why} alt="why" className='w-[100px] h-[100px] lg:ml-32' />
           </div>
@@ -71,7 +76,7 @@ const Home = () => {
       </div>
     </div>
         
-        </div> 
+        </div>  */}
     </div>
     {/* Our Services */}
     </>
