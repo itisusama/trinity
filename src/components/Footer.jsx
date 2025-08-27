@@ -12,7 +12,7 @@ export default function Footer() {
                          </Link>
                          </div>
                     <p className='text-sm'>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text
+                        Trinity Asset Care is a tech-driven short-term rental management startup helping property owners maximize income through expert virtual assistants, automation, and seamless guest experiences.
                     </p>
                     <div className='flex items-center gap-3 mt-4'>
                         {/* Instagram */}
@@ -39,7 +39,6 @@ export default function Footer() {
                     <ul className='mt-3 flex flex-col gap-2 text-sm'>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
                         <li><a href="#">Partners</a></li>
                     </ul>
                 </div>

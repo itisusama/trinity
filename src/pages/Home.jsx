@@ -1,84 +1,135 @@
 import React from 'react'
-import heroImage from '../assets/heroImage.png'
+import heroImage from '../assets/hero.jpeg'
 import ServicesCards from '../components/ServicesCards'
 import { assets } from '../assets/assets'
-import { Headset, PiggyBank, CalendarCheck } from "lucide-react";
+import { Headset, CalendarCheck, Users, Layers, Settings, TrendingUp, Globe, ListChecks, Megaphone } from "lucide-react";
 import { MdManageHistory } from "react-icons/md";
 import { FaDollarSign } from "react-icons/fa6";
+import AboutSection from '../components/AboutSection';
+import Banner from '../components/Banner';
+import Marquee from '../components/Marqee';
 
 const Home = () => {
   return (
     <>
     {/* Hero */}
-    <div className="h-[500px] w-full bg-cover bg-center relative"
-      style={{ backgroundImage: `url(${heroImage})` }}>
-      
-      <div className="py-8 px-8 absolute inset-0 flex flex-col items-start justify-center">
-        <h2 className='text-white font-bold text-6xl'>Your Rental Business <br /> Managed Better</h2>
-        <p className='text-white py-4'>Trained virtual Assistant & Full-Service <br/> out Sourcing your rentals.</p>
-        <button
-          type="button"
-          className="bg-[#157682] text-white border border-[#157682] md:inline hidden text-sm active:scale-95 transition-all w-40 h-11 rounded-md"
-        >
-          Get a Free Consultation
-        </button>
-      </div>
-    </div>
+    <div
+  className="h-[500px] w-full bg-cover bg-center relative"
+  style={{ backgroundImage: `url(${heroImage})`, backgroundSize: "cover" }}
+>
+  {/* Overlay for readability */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  {/* Content */}
+  <div className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-16 lg:px-24">
+    <h2 className="text-white font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight drop-shadow-lg max-w-2xl">
+      Your Rental Business <br /> Managed Better
+    </h2>
+
+    <p className="text-white mt-4 text-base md:text-lg lg:text-xl max-w-xl leading-relaxed drop-shadow-md">
+      Trained Virtual Assistants & Full-Service Outsourcing <br /> 
+       for Stress-Free Hosting.
+    </p>
+
+    <div className="flex gap-4 mt-6">
+  <button className="border border-white text-white cursor-pointer px-4 h-12 rounded-md hover:bg-white hover:text-[#157682] transition">
+    Get a Free Consultation
+  </button>
+  <button className="border border-white text-white cursor-pointer px-4 h-12 rounded-md hover:bg-white hover:text-[#157682] transition">
+    Learn More
+  </button>
+</div>
+  </div>
+</div>
+
     {/* Hero */}
+    {/* ABOUT */}
+    <AboutSection/>
+    {/* ABOUT */}
     {/* Our Services */}
-    <div className='bg-[#f1f6f2] px-8 py-8'>
+    <div id="services" className='bg-[#f1f6f2] px-8 py-8'>
       <h2 className='font-bold text-6xl text-center mb-6'>Our Services</h2>
-      <p className="mb-6 text-sm text-gray-500 text-center">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
-                    </p>
       {/* Cards */}
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <ServicesCards heading="24/7 Guest Communication" icon={<Headset className="text-white w-4 h-4"/>} imageUrl="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4"/>
-        <ServicesCards heading="Revenue Optimization" icon={<FaDollarSign className="text-white w-4 h-4"/>}/>
-        <ServicesCards heading="End-to-End Management" icon={<MdManageHistory className="text-white w-4 h-4"/>} imageUrl="https://fastly.picsum.photos/id/4/5000/3333.jpg?hmac=ghf06FdmgiD0-G4c9DdNM8RnBIN7BO0-ZGEw47khHP4"/>
-        <ServicesCards heading="Multi-Platform Support" icon={<CalendarCheck className="text-white w-4 h-4"/>}/>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <ServicesCards heading="24/7 Guest Communication" icon={<Headset className="text-white w-6 h-6"/>} imageUrl="https://fastly.picsum.photos/id/1/5000/3333.jpg?hmac=Asv2DU3rA_5D1xSe22xZK47WEAN0wjWeFOhzd13ujW4"/>
+        <ServicesCards heading="Revenue Management" icon={<FaDollarSign className="text-white w-6 h-6"/>} imageUrl="https://res.cloudinary.com/dp5assqjg/image/upload/v1756268064/WhatsApp_Image_2025-08-26_at_12.49.58_PM_vtv5ws.jpg"/>
+        <ServicesCards heading="End-to-End Management" icon={<MdManageHistory className="text-white w-6 h-6"/>} imageUrl="https://fastly.picsum.photos/id/4/5000/3333.jpg?hmac=ghf06FdmgiD0-G4c9DdNM8RnBIN7BO0-ZGEw47khHP4"/>
+        <ServicesCards heading="Multi-Platform Support" icon={<Globe className="text-white w-6 h-6"/>} imageUrl="https://res.cloudinary.com/dp5assqjg/image/upload/v1756270993/WhatsApp_Image_2025-08-27_at_10.00.26_AM_lhgnif.jpg"/>
+        <ServicesCards heading="Listing Optimization" icon={<ListChecks className="text-white w-6 h-6"/>} imageUrl="https://res.cloudinary.com/dp5assqjg/image/upload/v1756271397/WhatsApp_Image_2025-08-27_at_10.00.25_AM_lkasl6.jpg"/>
+        <ServicesCards heading="Marketing" icon={<Megaphone className="text-white w-6 h-6"/>} imageUrl="https://res.cloudinary.com/dp5assqjg/image/upload/v1756277542/WhatsApp_Image_2025-08-27_at_11.42.01_AM_lpuwvh.jpg"/>
       </div>
       {/* Cards */}
     </div>
     {/* Our Services */}
 
-    {/* Our Services */}
-    <div className='bg-white px-8 py-8'>
-      <h2 className='font-bold text-6xl text-center mb-6'>Why Choose Us</h2>
-      <p className="mb-6 text-sm text-gray-500 text-center">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.
-                    </p>
-        {/* <div className='grid grid-cols-1 md:grid-cols-2'>
-          <div className='flex items-center justify-center'>
-            <img src={assets.Why} alt="why" className='w-[100px] h-[100px] lg:ml-32' />
+    {/* why choose */}
+    <div className="bg-white px-8 py-16">
+      <h2 className="font-bold text-5xl text-center mb-12">Why Choose Us</h2>
+
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="flex items-start gap-4">
+          <div className="bg-blue-100 text-blue-600 p-3 rounded-2xl shadow-sm">
+            <Users size={28} />
           </div>
-          
-          <div className="flex flex-col gap-6 justify-between">
-      <div className="flex gap-8 items-center">
-        <div className="bg-[#13767c] rounded-full w-10 h-10 flex items-center justify-center">
-          <Headset className="text-white w-5 h-5" />
+          <div>
+            <h3 className="font-semibold text-lg">Real People, Real Results</h3>
+            <p className="text-gray-600 text-sm">
+              We’re not a faceless call center. We’re a team of STR professionals passionate about hospitality and results.
+            </p>
+          </div>
         </div>
-        <h1 className="font-bold">24/7 Support</h1>
-      </div>
 
-      <div className="flex gap-8 items-center">
-        <div className="bg-[#13767c] rounded-full w-10 h-10 flex items-center justify-center">
-          <PiggyBank className="text-white w-5 h-5" />
+        <div className="flex items-start gap-4">
+          <div className="bg-green-100 text-green-600 p-3 rounded-2xl shadow-sm">
+            <Layers size={28} />
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg">Platform Agnostic</h3>
+            <p className="text-gray-600 text-sm">
+              Whether you're on Hostaway, OwnerRez, or something else, we adapt to your systems, not the other way around.
+            </p>
+          </div>
         </div>
-        <h1 className="font-bold">Cost Saving</h1>
-      </div>
 
-      <div className="flex gap-8 items-center">
-        <div className="bg-[#13767c] rounded-full w-10 h-10 flex items-center justify-center">
-          <CalendarCheck className="text-white w-5 h-5" />
+        <div className="flex items-start gap-4">
+          <div className="bg-purple-100 text-purple-600 p-3 rounded-2xl shadow-sm">
+            <Settings size={28} />
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg">Customizable Plans</h3>
+            <p className="text-gray-600 text-sm">
+              No cookie-cutter packages. Every client’s needs are different; we tailor our solutions to fit your property goals.
+            </p>
+          </div>
         </div>
-        <h1 className="font-bold">Increased Bookings</h1>
+
+        <div className="flex items-start gap-4">
+          <div className="bg-orange-100 text-orange-600 p-3 rounded-2xl shadow-sm">
+            <TrendingUp size={28} />
+          </div>
+          <div>
+            <h3 className="font-semibold text-lg">Growth-Oriented Partnership</h3>
+            <p className="text-gray-600 text-sm">
+              We’re not just managers, we’re collaborators. Our goal is to grow alongside you and treat your assets like our own.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-        
-        </div>  */}
-    </div>
-    {/* Our Services */}
+    {/* why choose */}
+
+    {/* Marqee */}
+    <h1 className="text-center w-full text-6xl font-bold mb-6">
+        Our Platforms
+      </h1>
+      <Marquee />
+    {/* Marqee */}
+
+    {/* Banner */}
+    <Banner/>
+    {/* Banner */}
+
+    
     </>
   )
 }
