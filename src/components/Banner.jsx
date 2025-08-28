@@ -20,7 +20,7 @@ const Banner = () => {
         <p className="mt-4 text-sm md:text-base text-white max-w-xl mx-auto">
           Let Trinity Asset Care handle your rentals with expert management and smart automation so you enjoy higher profits and happier guests. Why wait? Let’s get started today!
         </p>
-        <button onClick={()=>navigate("/contact")} className="bg-[#157682] cursor-pointer mt-6 text-white border border-[#157682] md:inline hidden text-sm active:scale-95 transition-all w-40 h-11 rounded-md">
+        <button onClick={()=>navigate("/contact")} className="bg-[#157682] cursor-pointer mt-6 text-white border border-[#157682] md:inline text-sm active:scale-95 transition-all w-40 h-11 rounded-md">
             Contact Us
         </button>
       </div>

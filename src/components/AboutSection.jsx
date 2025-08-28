@@ -5,7 +5,7 @@ const AboutSection = () => {
     <section id="about" className="bg-gray-50 py-16">
       <div className="max-w-full mx-auto px-6 lg:px-12">
         {/* Heading */}
-        <h1 className="text-4xl md:text-6xl font-extrabold text-center text-gray-900">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-center text-gray-900" data-aos="fade-down">
           About Trinity
         </h1>
 

@@ -2,6 +2,7 @@
 export default function ServicesCards({ heading, imageUrl, icon }) {
   return (
 <section
+  data-aos="flip-left"
   className="relative rounded-md shadow-xl overflow-hidden group w-full h-56 cursor-pointer transition-transform duration-500"
   style={{
     backgroundImage: `url(${imageUrl})`,

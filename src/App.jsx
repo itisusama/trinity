@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Footer from './components/Footer';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Contact from './pages/Contact';
 
 const App = () => {
+    useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (in ms)
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
   return (
     <div>
       <Router>
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer/>
       </Router>
