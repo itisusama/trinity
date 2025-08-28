@@ -1,7 +1,6 @@
 import React from 'react'
 import { Phone, Mail, MapPin } from "lucide-react";
 import ContactForm from "../components/ContactForm";
-import USAMap from '../components/USAMap';
 
 const Contact = () => {
   return (
@@ -28,11 +27,14 @@ const Contact = () => {
             <ContactForm />
           </div>
 
-          {/* Map Section */}
-            <div className="w-full h-[400px]">
-            <USAMap />
-            </div>
-
+          {/* Map Image */}
+          <div className="w-full h-[400px]">
+            <img
+              src="https://cdn.prod.website-files.com/6736de2a05e13650764a2792/6739986ed2d3bd0a46385dc5_Vector.webp"
+              alt="Map"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </section>
 
         {/* Contact Info Cards */}
