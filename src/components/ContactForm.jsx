@@ -1,9 +1,86 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    companyName: "",
+    phone: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState(""); // success or error message
+
+  // Handle input changes
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+    setErrors({ ...errors, [e.target.id]: "" }); // clear error as user types
+  };
+
+  // Validate form fields
+  const validate = () => {
+    let newErrors = {};
+
+    if (!formData.fullName.trim()) newErrors.fullName = "Full name is required";
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required";
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (!formData.subject.trim()) newErrors.subject = "Subject is required";
+    if (!formData.message.trim()) newErrors.message = "Message is required";
+
+    return newErrors;
+  };
+
+  // Handle form submit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    try {
+      setStatus("Sending...");
+      const response = await fetch("http://localhost:5005/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("✅ Message sent successfully!");
+        setFormData({
+          fullName: "",
+          companyName: "",
+          phone: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setStatus("❌ Failed to send message. Try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("❌ Server error. Please try later.");
+    }
+  };
+
   return (
     <section>
-      <form className="flex flex-col gap-5 text-sm w-full">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-5 text-sm w-full"
+      >
         {/* Full Name */}
         <div className="w-full">
           <label className="text-black/70" htmlFor="fullName">
@@ -11,10 +88,12 @@ const ContactForm = () => {
           </label>
           <input
             id="fullName"
+            value={formData.fullName}
+            onChange={handleChange}
             className="h-12 p-3 mt-2 w-full border border-gray-300 rounded-md outline-none focus:border-[#157682]"
             type="text"
-            required
           />
+          {errors.fullName && <p className="text-red-500">{errors.fullName}</p>}
         </div>
 
         {/* Company Name */}
@@ -24,6 +103,8 @@ const ContactForm = () => {
           </label>
           <input
             id="companyName"
+            value={formData.companyName}
+            onChange={handleChange}
             className="h-12 p-3 mt-2 w-full border border-gray-300 rounded-md outline-none focus:border-[#157682]"
             type="text"
           />
@@ -36,10 +117,12 @@ const ContactForm = () => {
           </label>
           <input
             id="phone"
+            value={formData.phone}
+            onChange={handleChange}
             className="h-12 p-3 mt-2 w-full border border-gray-300 rounded-md outline-none focus:border-[#157682]"
             type="tel"
-            required
           />
+          {errors.phone && <p className="text-red-500">{errors.phone}</p>}
         </div>
 
         {/* Email */}
@@ -49,10 +132,12 @@ const ContactForm = () => {
           </label>
           <input
             id="email"
+            value={formData.email}
+            onChange={handleChange}
             className="h-12 p-3 mt-2 w-full border border-gray-300 rounded-md outline-none focus:border-[#157682]"
             type="email"
-            required
           />
+          {errors.email && <p className="text-red-500">{errors.email}</p>}
         </div>
 
         {/* Subject */}
@@ -62,10 +147,12 @@ const ContactForm = () => {
           </label>
           <input
             id="subject"
+            value={formData.subject}
+            onChange={handleChange}
             className="h-12 p-3 mt-2 w-full border border-gray-300 rounded-md outline-none focus:border-[#157682]"
             type="text"
-            required
           />
+          {errors.subject && <p className="text-red-500">{errors.subject}</p>}
         </div>
 
         {/* Message */}
@@ -75,9 +162,11 @@ const ContactForm = () => {
           </label>
           <textarea
             id="message"
+            value={formData.message}
+            onChange={handleChange}
             className="w-full mt-2 p-3 h-40 border border-gray-300 rounded-md resize-none outline-none focus:border-[#157682]"
-            required
           ></textarea>
+          {errors.message && <p className="text-red-500">{errors.message}</p>}
         </div>
 
         {/* Submit Button */}
@@ -88,6 +177,9 @@ const ContactForm = () => {
           Send Message
         </button>
       </form>
+
+      {/* Status message */}
+      {status && <p className="mt-4 text-center">{status}</p>}
     </section>
   );
 };
