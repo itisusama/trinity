@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Special+Elite&display=swap');
 @import "tailwindcss";
 
-.montserrat {
+.montserrat, h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.lato{
+.lato, p{
     font-family: "Lato", sans-serif;
 }
 
@@ -23,5 +23,11 @@ html {
 }
 
 .animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-testimonial-marquee {
+  display: flex;
+  width: max-content;
   animation: marquee 20s linear infinite;
 }

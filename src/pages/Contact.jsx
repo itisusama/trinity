@@ -1,19 +1,20 @@
 import React from 'react'
 import { Phone, Mail, MapPin } from "lucide-react";
 import ContactForm from "../components/ContactForm";
+import { assets } from '../assets/assets';
 
 const Contact = () => {
   return (
-     <div className="flex flex-col min-h-screen">
+     <div className="flex flex-col min-h-screen bg-gradient-to-r from-white via-white to-blue-50">
 
       {/* Main Content */}
       <main className="flex-grow">
         {/* Heading */}
-        <section className="max-w-5xl mx-auto px-6 md:px-12 py-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <section className="max-w-6xl mx-auto px-6 md:px-12 mt-[7rem] text-center">
+          <h1 data-aos="fade-down" className="text-4xl md:text-6xl font-bold mb-6 text-gray-600">
             We’re here to help you grow
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
+          <p data-aos="fade-up" className="text-lg md:text-xl text-gray-500 leading-relaxed">
             Whether you're scheduling your first consultation or a follow-up
             strategy session, our appointments are key to building client
             relationships.
@@ -21,43 +22,43 @@ const Contact = () => {
         </section>
 
         {/* Grid Section */}
-        <section className="max-w-6xl mx-auto px-6 md:px-12 py-12 grid md:grid-cols-2 gap-10 items-center">
+        <section className="max-w-6xl mx-auto px-6 md:px-12 mt-[4rem] grid md:grid-cols-2 gap-10 items-center">
           {/* Contact Form */}
-          <div className="bg-white shadow-lg rounded-2xl p-6 md:p-8">
+          <div data-aos="fade-right" className="bg-white shadow-lg rounded-2xl p-6 md:p-8">
             <ContactForm />
           </div>
 
           {/* Map Image */}
-          <div className="w-full h-[400px]">
+          <div className="w-full h-[500px]" data-aos="fade-left">
             <img
               src="https://cdn.prod.website-files.com/6736de2a05e13650764a2792/6739986ed2d3bd0a46385dc5_Vector.webp"
               alt="Map"
-              className="w-full h-full object-cover"
+              className="object-cover"
             />
           </div>
         </section>
 
         {/* Contact Info Cards */}
-        <section className="max-w-6xl mx-auto px-6 md:px-12 py-16 grid md:grid-cols-3 gap-6">
+        <section className="max-w-6xl mx-auto px-6 md:px-12 lg:py-16 grid md:grid-cols-3 gap-6">
           {/* Phone */}
-          <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
             <Phone className="w-10 h-10 text-[#157682] mb-4" />
             <h3 className="font-semibold text-xl mb-2">Phone</h3>
-            <p className="text-gray-600">+92 300 1234567</p>
+            <p className="text-gray-600">+1 (817) 532-4429</p>
           </div>
 
           {/* Email */}
-          <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
             <Mail className="w-10 h-10 text-[#157682] mb-4" />
             <h3 className="font-semibold text-xl mb-2">Email</h3>
-            <p className="text-gray-600">info@example.com</p>
+            <p className="text-gray-600">trinityassetcare@gmail.com</p>
           </div>
 
           {/* Visit Us */}
-          <div className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
             <MapPin className="w-10 h-10 text-[#157682] mb-4" />
             <h3 className="font-semibold text-xl mb-2">Visit Us</h3>
-            <p className="text-gray-600">123 Main Street, Lahore</p>
+            <p className="text-gray-600">2nd Floor, MM Tower, MM Alam, Lahore</p>
           </div>
         </section>
       </main>

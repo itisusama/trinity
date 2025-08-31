@@ -6,6 +6,9 @@ import Footer from './components/Footer';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Contact from './pages/Contact';
+import ServiceDetail from './pages/ServiceDetail';
+import ScrollToTop from './components/ScrollToTop';
+import Testimonial from './pages/Testimonial';
 
 const App = () => {
     useEffect(() => {
@@ -18,16 +21,19 @@ const App = () => {
     <div>
       <Router>
         <Navbar/>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/services/:id" element={<ServiceDetail />} />
+          <Route path="/testimonial" element={<Testimonial />} />
         </Routes>
         <Footer/>
       </Router>
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/923074518566"
+        href="https://wa.me/+92321647336"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300"

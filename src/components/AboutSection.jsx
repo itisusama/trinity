@@ -2,18 +2,29 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="bg-gray-50 py-16">
+    <section
+      id="about"
+      className="relative bg-gray-50 py-16 overflow-hidden"
+    >
+      {/* Decorative teal circle */}
+      <div className="absolute top-0 -right-5 w-64 h-full bg-[#157682] rounded-l-full opacity-20 blur-3xl"></div>
+
       <div className="max-w-full mx-auto px-6 lg:px-12">
         {/* Heading */}
-        <h1 className="text-4xl md:text-6xl font-extrabold text-center text-gray-900" data-aos="fade-down">
-          About Trinity
+        <h1
+          className="text-4xl md:text-6xl font-extrabold text-center text-gray-600"
+          data-aos="fade-down"
+        >
+          About
+          <span className="bg-gradient-to-r ml-2 from-[#157682] to-[#4fd1c5] bg-clip-text text-transparent">
+            Trinity
+          </span>
         </h1>
 
         {/* Content */}
         <div className="mt-12 flex flex-col md:flex-row items-center gap-12">
-    
           {/* Right Text */}
-          <div className="flex-1 lg:px-12 text-md leading-relaxed text-gray-700 space-y-6">
+          <div data-aos="fade-up" className="flex-1 lg:px-12 text-md leading-relaxed text-gray-700 space-y-6">
             <p>
               Every great business starts with a simple idea. At{" "}
               <span className="font-semibold text-gray-900">
@@ -25,7 +36,7 @@ const AboutSection = () => {
 
             <p>
               We began as a small, passionate team who understood two things
-              very well—<span className="font-semibold">technology</span> and{" "}
+              very well <span className="font-semibold">technology</span> and{" "}
               <span className="font-semibold">hospitality</span>. We saw how
               overwhelming it could be for property owners to juggle guest
               communication, bookings, cleaning schedules, and pricing
@@ -36,18 +47,25 @@ const AboutSection = () => {
             </p>
 
             <p>
-              From that vision, <span className="font-semibold">Trinity Asset Care</span> was born. Today, we’re a nimble, tech-savvy startup dedicated to transforming ordinary rentals into standout guest magnets.
+              From that vision,{" "}
+              <span className="font-semibold">Trinity Asset Care</span> was born.
+              Today, we’re a nimble, tech-savvy startup dedicated to
+              transforming ordinary rentals into standout guest magnets.
             </p>
 
             <p>
-              By combining the power of leading OTAs—Airbnb, Booking.com, and
-              VRBO—with best-in-class PMS tools like Hostaway, Guesty,
+              By combining the power of leading OTAs Airbnb, Booking.com, and
+              VRBO with best-in-class PMS tools like Hostaway, Guesty,
               Hospitable, Hostfully, OwnerRez, and Monday.com, we’ve built a
               system that blends the efficiency of automation with the warmth of
               human touch.
             </p>
 
-            <p className="border-l-4 border-[#157682] pl-4 italic text-gray-900">
+            <h2 className="text-4xl font-bold">Our <span className="bg-gradient-to-r from-[#157682] to-[#4fd1c5] bg-clip-text text-transparent">
+            Mission
+          </span></h2>
+
+            <p className="border-l-4 border-[#157682] pl-4 text-gray-900">
               Our mission is simple: to help you unlock your property’s full
               potential while delivering unforgettable experiences to your
               guests. Hosting should never feel stressful—it should feel

@@ -1,6 +1,19 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
+
+const scrollToSection = (sectionId, navigate, location) => {
+  if (location.pathname !== "/") {
+    navigate("/", { state: { scrollTo: sectionId } });
+  } else {
+    scroller.scrollTo(sectionId, {
+      smooth: true,
+      duration: 500,
+      offset: -80, // Adjust for navbar height
+    });
+  }
+};
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="h-[80px] fixed w-full px-6 md:px-8 flex items-center justify-between z-20 bg-black/50 text-gray-700 shadow-[0px_4px_25px_0px_#0000000D] transition-all">
+      <nav className="h-[80px] fixed w-full px-6 md:px-12 flex items-center justify-between z-20 bg-black/50 text-gray-700 shadow-[0px_4px_25px_0px_#0000000D] transition-all">
         {/* Logo */}
         <div className="flex gap-3">
           <Link to="/">
@@ -19,22 +32,33 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="md:flex hidden text-xl items-center gap-10">
           <Link to="/">
-            <a className="text-white transition" href="#">
+            <a className="text-white transition hover:text-[#157682]" href="#">
               Home
             </a>
           </Link>
           <li>
-            <a className="text-white transition" href="#services">
+            <button
+              className="text-white transition hover:text-[#157682] cursor-pointer"
+              onClick={() => scrollToSection("services", navigate, location)}
+            >
               Services
-            </a>
+            </button>
           </li>
           <li>
-            <a className="text-white transition" href="#about">
-              About
-            </a>
+              <button
+              className="text-white transition hover:text-[#157682] cursor-pointer"
+              onClick={() => scrollToSection("about", navigate, location)}
+            >
+              About            
+              </button>
           </li>
+          <Link to="/testimonial">
+              <a className="text-white hover:text-[#157682] transition">
+                Our Impact
+              </a>
+            </Link>
           <Link to="/contact">
-            <a className="text-white transition">
+            <a className="text-white hover:text-[#157682] transition">
               Contact
             </a>
           </Link>
@@ -95,15 +119,26 @@ const Navbar = () => {
               </a>
             </Link>
             <li>
-              <a href="#" className="text-sm" id="#services">
-                Services
+            <button
+              className="text-white transition cursor-pointer"
+              onClick={() => scrollToSection("services", navigate, location)}
+            >
+              Services
+            </button>
+          </li>
+          <li>
+              <button
+              className="text-white transition cursor-pointer"
+              onClick={() => scrollToSection("about", navigate, location)}
+            >
+              About            
+              </button>
+          </li>
+          <Link to="/testimonial">
+              <a className="text-sm cursor-pointer">
+                Our Impact
               </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm" id="#about">
-                About
-              </a>
-            </li>
+            </Link>
             <Link to="/contact">
               <a className="text-sm cursor-pointer">
                 Contact
