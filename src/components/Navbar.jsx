@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="h-[80px] fixed w-full px-6 md:px-12 flex items-center justify-between z-20 bg-black/50 text-gray-700 shadow-[0px_4px_25px_0px_#0000000D] transition-all">
+      <nav className="h-[80px] fixed w-full px-6 lg:px-12 flex items-center justify-between z-20 bg-black/50 text-gray-700 shadow-[0px_4px_25px_0px_#0000000D] transition-all">
         {/* Logo */}
         <div className="flex gap-3">
           <Link to="/">
@@ -30,7 +30,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="md:flex hidden text-xl items-center gap-10">
+        <ul className="lg:flex hidden text-xl items-center gap-10">
           <Link to="/">
             <a className="text-white transition hover:text-[#157682]" href="#">
               Home
@@ -67,7 +67,7 @@ const Navbar = () => {
         {/* Desktop Button */}
         <button
           type="button"
-          className="bg-[#157682] text-white px-4 border border-[#157682] md:inline hidden text-sm active:scale-95 transition-all h-11 rounded-md cursor-pointer"
+          className="bg-[#157682] text-white px-4 border border-[#157682] lg:inline hidden text-sm active:scale-95 transition-all h-11 rounded-md cursor-pointer"
         onClick={()=>navigate("/contact")}
         >
           Get a Free Consultation
@@ -78,7 +78,7 @@ const Navbar = () => {
   aria-label="menu-btn"
   type="button"
   onClick={() => setMenuOpen(!menuOpen)}
-  className="menu-btn inline-block md:hidden active:scale-90 transition"
+  className="menu-btn inline-block lg:hidden active:scale-90 transition"
 >
   {menuOpen ? (
     // Cross (X) Icon
@@ -108,7 +108,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`mobile-menu absolute top-[80px] left-0 w-full bg-black/50 p-6 md:hidden transition-all duration-300 ${
+          className={`mobile-menu absolute top-[80px] left-0 w-full bg-black/50 p-6 lg:hidden transition-all duration-300 ${
             menuOpen ? "block" : "hidden"
           }`}
         >
@@ -148,7 +148,7 @@ const Navbar = () => {
 
           <button
           type="button"
-          className="bg-[#157682] text-white px-4 border border-[#157682] md:inline text-sm active:scale-95 transition-all h-11 rounded-md cursor-pointer"
+          className="bg-[#157682] text-white px-4 border border-[#157682] lg:inline text-sm active:scale-95 transition-all h-11 rounded-md cursor-pointer"
         onClick={()=>navigate("/contact")}
         >
           Get a Free Consultation

@@ -33,85 +33,21 @@ const StatsCounter = () => {
   }, []);
 
   return (
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      background: 'linear-gradient(135deg, #157682, #18ddc6)',
-      padding: '40px 20px',
-      borderRadius: '16px',
-      boxShadow: '0 10px 20px rgba(0, 0, 0, 0.15)',
-      color: '#f0fdfa',
-      fontFamily: '"Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
-      maxWidth: '1200px',
-      margin: '0 auto',
-    }}>
-      <div style={{
-        flex: 1,
-        textAlign: 'center',
-        padding: '0 40px',
-        borderRight: '2px solid rgba(255, 255, 255, 0.3)',
-      }}>
-        <h2 style={{
-          fontSize: '48px',
-          fontWeight: 'bold',
-          margin: 0,
-          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)',
-        }}>
-          {projectsCount}+
-        </h2>
-        <p style={{
-          fontSize: '18px',
-          margin: '8px 0 0',
-          opacity: 0.9,
-        }}>
-          Projects In The Past Year
-        </p>
-      </div>
-      <div style={{
-        flex: 1,
-        textAlign: 'center',
-        padding: '0 40px',
-        borderRight: '2px solid rgba(255, 255, 255, 0.3)',
-      }}>
-        <h2 style={{
-          fontSize: '48px',
-          fontWeight: 'bold',
-          margin: 0,
-          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)',
-        }}>
-          {satisfactionCount}/5
-        </h2>
-        <p style={{
-          fontSize: '18px',
-          margin: '8px 0 0',
-          opacity: 0.9,
-        }}>
-          Customer Satisfaction Rate
-        </p>
-      </div>
-      <div style={{
-        flex: 1,
-        textAlign: 'center',
-        padding: '0 40px',
-      }}>
-        <h2 style={{
-          fontSize: '48px',
-          fontWeight: 'bold',
-          margin: 0,
-          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.2)',
-        }}>
-          {teamCount}+
-        </h2>
-        <p style={{
-          fontSize: '18px',
-          margin: '8px 0 0',
-          opacity: 0.9,
-        }}>
-          Professional Team Members
-        </p>
-      </div>
-    </div>
+    <div className="flex flex-wrap justify-center items-center gap-6 bg-gradient-to-br from-[#157682] to-[#18ddc6] p-8 lg:rounded-2xl shadow-lg text-[#f0fdfa] max-w-6xl mx-auto">
+  <div className="flex-1 min-w-[250px] text-center px-5 md:border-r md:border-white/30 last:border-none">
+    <h2 className="text-5xl font-bold">{projectsCount}+</h2>
+    <p className="text-lg opacity-90 mt-2">Projects In The Past Year</p>
+  </div>
+  <div className="flex-1 min-w-[250px] text-center px-5 md:border-r md:border-white/30 last:border-none">
+    <h2 className="text-5xl font-bold">{satisfactionCount}/5</h2>
+    <p className="text-lg opacity-90 mt-2">Customer Satisfaction Rate</p>
+  </div>
+  <div className="flex-1 min-w-[250px] text-center px-5">
+    <h2 className="text-5xl font-bold">{teamCount}+</h2>
+    <p className="text-lg opacity-90 mt-2">Professional Team Members</p>
+  </div>
+</div>
+
   );
 };
 

@@ -13,7 +13,7 @@ export default function WorldMap() {
   return (
     <div data-aos="fade-up" className="relative w-full flex flex-col items-center">
       <div className="relative w-full max-w-5xl mt-16">
-        <img src="https://cdn.prod.website-files.com/6736de2a05e13650764a2792/6739986ed2d3bd0a46385dc5_Vector.webp" alt="World Map" className="w-full h-[470px]" />
+        <img src="https://cdn.prod.website-files.com/6736de2a05e13650764a2792/6739986ed2d3bd0a46385dc5_Vector.webp" alt="World Map" className="w-full lg:h-[470px]" />
         {locations.map((loc, index) => (
           <div
             key={index}

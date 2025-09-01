@@ -37,9 +37,9 @@ const Home = () => {
   <button data-aos="fade-up" onClick={()=>navigate("/contact")} className="border border-white text-white cursor-pointer px-4 h-12 rounded-md hover:bg-white hover:text-[#157682] transition">
     Get a Free Consultation
   </button>
-  <button data-aos="fade-up" className="border border-white text-white cursor-pointer px-4 h-12 rounded-md hover:bg-white hover:text-[#157682] transition">
+  {/* <button data-aos="fade-up" className="border border-white text-white cursor-pointer px-4 h-12 rounded-md hover:bg-white hover:text-[#157682] transition">
     Learn More
-  </button>
+  </button> */}
 </div>
   </div>
 </div>
@@ -49,7 +49,7 @@ const Home = () => {
     <AboutSection/>
     {/* ABOUT */}
     {/* Our Services */}
-    <div id="services" className='py-6 sm:py-8 lg:py-12 bg-[#f1f6f2] px-8'>
+    <div id="services" className='py-6 sm:py-8 lg:py-12 bg-[#f1f6f2] md:px-8'>
       <h2 className='font-bold text-6xl text-center mb-6 text-gray-600' data-aos="fade-down">Our <span className="bg-gradient-to-r from-[#157682] to-[#4fd1c5] bg-clip-text text-transparent">
             Services
           </span></h2>

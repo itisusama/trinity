@@ -39,26 +39,33 @@ const Contact = () => {
         </section>
 
         {/* Contact Info Cards */}
-        <section className="max-w-6xl mx-auto px-6 md:px-12 lg:py-16 grid md:grid-cols-3 gap-6">
+        <section className="mx-auto px-6 md:px-12 lg:py-16 my-16 lg:mb-0 flex flex-wrap justify-center gap-6">
           {/* Phone */}
-          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
             <Phone className="w-10 h-10 text-[#157682] mb-4" />
             <h3 className="font-semibold text-xl mb-2">Phone</h3>
             <p className="text-gray-600">+1 (817) 532-4429</p>
           </div>
 
           {/* Email */}
-          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
             <Mail className="w-10 h-10 text-[#157682] mb-4" />
             <h3 className="font-semibold text-xl mb-2">Email</h3>
             <p className="text-gray-600">trinityassetcare@gmail.com</p>
           </div>
 
           {/* Visit Us */}
-          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition">
+          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
             <MapPin className="w-10 h-10 text-[#157682] mb-4" />
             <h3 className="font-semibold text-xl mb-2">Visit Us</h3>
             <p className="text-gray-600">2nd Floor, MM Tower, MM Alam, Lahore</p>
+          </div>
+          
+          {/* Visit Us */}
+          <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
+            <MapPin className="w-10 h-10 text-[#157682] mb-4" />
+            <h3 className="font-semibold text-xl mb-2">Visit Us</h3>
+            <p className="text-gray-600">8 The Green, Suite B, Dover, 19901</p>
           </div>
         </section>
       </main>
