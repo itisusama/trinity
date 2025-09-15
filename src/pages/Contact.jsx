@@ -51,7 +51,7 @@ const Contact = () => {
           <div data-aos="fade-up" className="bg-white shadow-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-xl transition w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
             <Mail className="w-10 h-10 text-[#157682] mb-4" />
             <h3 className="font-semibold text-xl mb-2">Email</h3>
-            <p className="text-gray-600">trinityassetcare@gmail.com</p>
+            <p className="text-gray-600">contact@trinity-assetcare.com</p>
           </div>
 
           {/* Visit Us */}
