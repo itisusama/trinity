@@ -1,7 +1,6 @@
 import React from 'react'
 import heroImage from '../assets/hero.jpeg'
 import ServicesCards from '../components/ServicesCards'
-import { assets } from '../assets/assets'
 import { Users, Layers, Settings, TrendingUp } from "lucide-react";
 import AboutSection from '../components/AboutSection';
 import Banner from '../components/Banner';
@@ -28,13 +27,13 @@ const Home = () => {
       Your Rental Business <br /> Managed Better
     </h3>
 
-    <p data-aos="fade-up" className="text-white mt-4 text-base md:text-lg lg:text-xl max-w-xl leading-relaxed drop-shadow-md">
+    <p data-aos="fade-down" className="text-white mt-4 text-base md:text-lg lg:text-xl max-w-xl leading-relaxed drop-shadow-md">
       Trained Virtual Assistants & Full-Service Outsourcing <br /> 
        for Stress-Free Hosting.
     </p>
 
     <div className="flex gap-4 mt-6">
-  <button data-aos="fade-up" onClick={()=>navigate("/contact")} className="border border-white text-white cursor-pointer px-4 h-12 rounded-md hover:bg-white hover:text-[#157682] transition">
+  <button data-aos="fade-down" onClick={()=>navigate("/contact")} className="border border-white text-white cursor-pointer px-4 h-12 rounded-md hover:bg-white hover:text-[#157682] transition">
     Get a Free Consultation
   </button>
   {/* <button data-aos="fade-up" className="border border-white text-white cursor-pointer px-4 h-12 rounded-md hover:bg-white hover:text-[#157682] transition">

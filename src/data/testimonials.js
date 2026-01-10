@@ -1,33 +1,27 @@
 const testimonials = [
   {
-    text: "Partnering with Trinity Asset Care was the best decision for my Airbnb business. The 24/7 guest communication service has taken all the stress off my shoulders. My guests consistently mention how responsive and helpful 'my team' is it’s really boosted my reviews!",
-    name: "Sarah L.",
-    title: "Airbnb Host (Miami, USA)",
-    img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1756599589/WhatsApp_Image_2025-08-31_at_5.19.08_AM_ss73nm.jpg"
+    text: "Working with Trinity Asset Care for about a year now has been such a relief. Managing properties across Asheville, Sedona, and Westport can get hectic, but their team keeps everything running smoothly. Guest communication is always on point, issues are handled quickly, and I finally feel like I can step back without worrying about the day-to-day details. They’re organized, responsive, and genuinely easy (and enjoyable) to work with. I couldn’t ask for a better support team.",
+    name: "Anastasia Foster",
+    title: "Everwild Retreats",
+    img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1768030831/anstasia_e7hi73.jpg"
   },
   {
-    text: "Before working with Trinity Asset Care, I was constantly waking up at odd hours to answer guest queries. Now, everything is handled professionally around the clock. My bookings have increased, and my guests are happier than ever.",
-    name: "Ivan P.",
-    title: "Vacation Rental Owner (Bulgaria)",
-    img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1756600061/WhatsApp_Image_2025-08-31_at_5.21.33_AM_oyprwt.jpg",
+    text: "We’ve been working with Trinity Asset Care for over a year, and the experience has been outstanding. Managing a large portfolio in San Juan requires reliability and strong execution and their team consistently delivers. They’re proactive, dependable, and feel like a true extension of our operations. Highly recommended.",
+    name: "Rodrigo Loveras",
+    title: "Hospitri & Axial Management",
+    img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1768030739/rodrigo_mkpawi.jpg",
   },
   {
-    text: "I was hesitant at first, but Trinity Asset Care has truly transformed my short-term rental management. Guests always get instant replies, and I don’t have to worry about a single thing. Their communication service is worth every penny.",
-    name: "Jennifer M.",
-    title: "Property Investor (Toronto, Canada)",
+    text: "Trinity Asset Care has been an incredible partner over the past two years. Managing multiple properties across Dallas requires consistency and quick decision-making, and their team delivers every time. Guest communication is seamless, operations run smoothly, and issues are handled before they become problems. They’ve made scaling our portfolio much easier, and I trust them completely with our day-to-day management.",
+    name: "Aaron Samples",
+    title: "Everest Stays – Dallas, Texas",
+    img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1768030653/aaron_samples_sfya5t.jpg",
+  },
+  {
+    text: "Working with Trinity Asset Care has honestly been such a breath of fresh air. With properties in both Tennessee and San Diego, it’s comforting to know I have a team I can truly rely on. They’re attentive, quick to respond, and handle the details with so much care that I never feel out of the loop. Beyond the work itself, they’re just genuinely pleasant to collaborate with, which makes a huge difference. I’m so glad to have them as part of our journey.",
+    name: "Selina Gruden",
+    title: "Skyview Cabins",
     img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1756604367/WhatsApp_Image_2025-08-31_at_6.33.43_AM_xjjrcj.jpg",
-  },
-  {
-    text: "The team treats my properties as if they were their own. Guests love the fast responses, and I’ve noticed a big jump in my 5-star reviews. I finally get to enjoy passive income without the late-night headaches!",
-    name: "Carlos R.",
-    title: "STR Owner (San Juan, Puerto Rico)",
-    img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1756599872/WhatsApp_Image_2025-08-31_at_5.21.17_AM_tdviz1.jpg",
-  },
-  {
-    text: "Professional, reliable, and always available. Trinity has given me complete peace of mind. I can finally focus on growing my portfolio instead of getting stuck in guest messaging all day.",
-    name: "Emily H.",
-    title: "Multi-Property Host (Austin, USA)",
-    img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1756599689/WhatsApp_Image_2025-08-31_at_5.19.37_AM_mnr9ls.jpg",
   },
 ];
 

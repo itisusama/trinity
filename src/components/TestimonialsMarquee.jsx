@@ -5,6 +5,11 @@ import TestimonialCards from "./TestimonialCards";
 const TestimonialsMarquee = () => {
   return (
     <div className="relative w-full overflow-hidden py-10">
+      <h2 className="text-center w-full text-6xl font-bold mb-6 text-gray-600" data-aos="fade-down">
+        Trusted by <span className="bg-gradient-to-r from-[#157682] to-[#4fd1c5] bg-clip-text text-transparent">
+    clients
+  </span>
+      </h2>
       {/* Fade Overlays */}
       <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
       <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
