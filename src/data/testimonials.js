@@ -23,6 +23,12 @@ const testimonials = [
     title: "Skyview Cabins",
     img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1756604367/WhatsApp_Image_2025-08-31_at_6.33.43_AM_xjjrcj.jpg",
   },
+  {
+    text: "Working with Trinity Asset Care transformed our hotel operations. Their expertise in listing optimization, revenue management, and daily operations quickly improved our visibility, occupancy, and overall revenue. Their proactive approach and seamless guest communication gave us a truly hands-off experience while enhancing guest satisfaction. I highly recommend Trinity Asset Care to any hotel owner looking to grow revenue and streamline operations.",
+    name: "Emad Shah",
+    title: "The Citrus Boutique Hotel",
+    img: "https://res.cloudinary.com/dp5assqjg/image/upload/v1772397072/citrus_thhsst.jpg",
+  },
 ];
 
 export default testimonials;
